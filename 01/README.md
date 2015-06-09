@@ -77,9 +77,9 @@ npm install \
   grunt-contrib-uglify \
   grunt-contrib-htmlmin \
   grunt-contrib-jshint \
+  grunt-contrib-cssmin \
   grunt-lintspaces \
   grunt-browser-sync \
-  grunt-csso \
   grunt-filerev \
   grunt-usemin \
   --save-dev
@@ -120,17 +120,19 @@ bower install \
 
   * [[GitHub] gruntjs / grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint) - Validate files with JSHint.
 
+  * [[GitHub] gruntjs / grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin) - Compress CSS files.
+
   * [[GitHub] schorfES / grunt-lintspaces](https://github.com/schorfES/grunt-lintspaces) - A Grunt task for checking spaces in files.
 
   * [[GitHub] BrowserSync / grunt-browser-sync](https://github.com/BrowserSync/grunt-browser-sync) - Grunt Task for keeping multiple browsers & devices in sync when building websites.
-
-  * [[GitHub] t32k / grunt-csso](https://github.com/t32k/grunt-csso) - Minify CSS files with CSSO.
 
   * [[GitHub] yeoman / grunt-filerev](https://github.com/yeoman/grunt-filerev) - File revving
 
   * [[GitHub] yeoman / grunt-usemin](https://github.com/yeoman/grunt-usemin) - Replaces references to non-optimized scripts or stylesheets into a set of HTML files (or any templates/views)
 
     * [grunt-usemin | Grunt Tasks](http://grunt-tasks.com/grunt-usemin/) - Automated optimization of css, js and html files.
+
+      * [[GitHub] kanakiyajay / grunt-tasks](https://github.com/kanakiyajay/grunt-tasks) - This repo is for all the Gruntfile.js for grunt plugins
 
 
 ## License
