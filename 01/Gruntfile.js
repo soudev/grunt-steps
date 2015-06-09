@@ -44,6 +44,16 @@ module.exports = function(grunt) {
       }
     }, // @end: copy
 
+    jshint: {
+      options: {
+        reporter: require('jshint-stylish')
+      },
+
+      tools: ['Gruntfile.js'],
+
+
+      project: ['src/**/*.js']
+    } // @end: jshint
 
     // TODO: review and define grunt tasks config
 
