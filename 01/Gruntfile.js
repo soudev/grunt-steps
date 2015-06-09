@@ -133,7 +133,34 @@ module.exports = function(grunt) {
           'dist/index.html': 'dist/index.html'
         }
       }
-    } // @end: htmlmin
+    }, // @end: htmlmin
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: [
+            'src/**/*.{html,css,js}'
+          ]
+        },
+        options: {
+          port: 1337,
+          server: {
+            baseDir: ['src', '.local/bower']
+          },
+          // watchTask: true
+        }
+      },
+
+      dist: {
+        options: {
+          ui: false,
+          port: 1337,
+          server: {
+            baseDir: ['dist']
+          }
+        }
+      }
+    }, // @end: browserSync
 
     // TODO: review and define grunt tasks config
 
@@ -189,18 +216,14 @@ module.exports = function(grunt) {
   //----------------------------------------------------------------------------
   // @begin: main
   grunt.registerTask('default', function() {
-    grunt.task.run('projectInfoMsg');
+    grunt.task.run(['bower:dev', 'browserSync:dev', 'projectInfoMsg']);
 
-    grunt.log.writeln('TODO: define development workflow');
+    grunt.log.writeln('TODO: define watch tasks');
   });
 
   grunt.registerTask('release', ['build', 'projectInfoMsg']);
 
-  grunt.registerTask('preview', function() {
-    grunt.task.run('projectInfoMsg');
-
-    grunt.log.writeln('TODO: define preview workflow');
-  });
+  grunt.registerTask('preview', ['release', 'browserSync:dist']);
 
   // @end: main
   //============================================================================
