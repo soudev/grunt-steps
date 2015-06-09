@@ -53,7 +53,30 @@ module.exports = function(grunt) {
 
 
       project: ['src/**/*.js']
-    } // @end: jshint
+    }, // @end: jshint
+
+    lintspaces: {
+      options: {
+        editorconfig: '../.editorconfig'
+      },
+
+      tools: {
+        src: ['Gruntfile.js']
+      },
+
+      project_js: {
+        src: ['src/**/*.js']
+      },
+
+      project_styles: {
+        src: ['src/**/*.css']
+      },
+
+      project_html: {
+        src: ['src/**/*.html']
+      }
+
+    }, // @end: lintspaces
 
     // TODO: review and define grunt tasks config
 
@@ -71,6 +94,8 @@ module.exports = function(grunt) {
     grunt.log.writeln('project: ' + pkg.name + ' v' + pkg.version);
     grunt.log.writeln('description: ' + pkg.description);
   });
+
+  grunt.registerTask('validate', ['jshint', 'lintspaces']);
 
   //----------------------------------------------------------------------------
   // @begin: bower
