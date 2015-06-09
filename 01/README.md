@@ -33,7 +33,7 @@ npm install
 
 ## Commands
 
-> run gulp
+> run grunt
 
 ```bash
 npm start
