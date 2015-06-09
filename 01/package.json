@@ -1,0 +1,19 @@
+{
+  "name": "grunt-steps-01",
+  "private": true,
+  "version": "0.1.0",
+  "description": "basic grunt example",
+  "scripts": {
+    "postinstall": "bower install",
+    "outdated": "npm outdated --depth=0",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "grunt"
+  },
+  "keywords": [
+    "grunt",
+    "basic",
+    "example"
+  ],
+  "author": "Erko Bridee",
+  "license": "MIT"
+}
