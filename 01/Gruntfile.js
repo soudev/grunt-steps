@@ -162,7 +162,7 @@ module.exports = function(grunt) {
       }
     }, // @end: browserSync
 
-    // TODO: review and define grunt tasks config
+    // TODO: define watch tasks config
 
   });
 
@@ -210,16 +210,16 @@ module.exports = function(grunt) {
 
   // @end: build
   //----------------------------------------------------------------------------
-
-  // TODO: define tasks
-
-  //----------------------------------------------------------------------------
   // @begin: main
-  grunt.registerTask('default', function() {
-    grunt.task.run(['bower:dev', 'browserSync:dev', 'projectInfoMsg']);
 
-    grunt.log.writeln('TODO: define watch tasks');
-  });
+  grunt.registerTask('default', [
+    'clean',
+    'validate',
+    'bower:dev',
+    'browserSync:dev',
+    'projectInfoMsg',
+    // 'watch'
+  ]);
 
   grunt.registerTask('release', ['build', 'projectInfoMsg']);
 
