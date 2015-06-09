@@ -9,9 +9,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-lintspaces');
   grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-filerev');
   grunt.loadNpmTasks('grunt-usemin');
 
@@ -24,6 +24,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
+      build: ['.local/build', '.tmp'],
       dist: ['dist'],
       bower: ['.local/bower']
     }, // @end: clean
@@ -39,6 +40,18 @@ module.exports = function(grunt) {
       bower_dist: {
         expand: true,
         cwd: '.local/bower/',
+        src: '**',
+        dest: 'dist/'
+      },
+
+      build_index: {
+        src: 'src/index.html',
+        dest: '.local/build/index.html'
+      },
+
+      builded2dist: {
+        expand: true,
+        cwd: '.local/build/',
         src: '**',
         dest: 'dist/'
       }
@@ -78,6 +91,50 @@ module.exports = function(grunt) {
 
     }, // @end: lintspaces
 
+    filerev: {
+      options: {
+        encoding: 'utf8',
+        algorithm: 'md5',
+        length: 20
+      },
+      source: {
+        src: [
+          '.local/build/scripts/*.js',
+          '.local/build/styles/*.css'
+        ]
+      }
+    }, // @end: filerev
+
+    useminPrepare: {
+      html: 'src/index.html',
+      options: {
+        dest: '.local/build'
+      }
+    }, // @end: useminPrepare
+
+    usemin: {
+      html: '.local/build/index.html',
+      options: {
+        assetsDirs: [
+          '.local/build',
+          '.local/build/styles',
+          '.local/build/scripts'
+        ]
+      }
+    }, // @end: usemin
+
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'dist/index.html': 'dist/index.html'
+        }
+      }
+    } // @end: htmlmin
+
     // TODO: review and define grunt tasks config
 
   });
@@ -107,6 +164,25 @@ module.exports = function(grunt) {
 
   // @end: bower
   //----------------------------------------------------------------------------
+  // @begin: build
+
+  grunt.registerTask('build:index', [
+    'copy:build_index',
+    'useminPrepare',
+    'concat',
+    'cssmin',
+    'uglify',
+    'filerev',
+    'usemin',
+    'copy:builded2dist',
+    'clean:build',
+    'htmlmin:dist'
+  ]);
+
+  grunt.registerTask('build', ['clean:dist', 'validate', 'build:index', 'bower:dist']);
+
+  // @end: build
+  //----------------------------------------------------------------------------
 
   // TODO: define tasks
 
@@ -118,11 +194,7 @@ module.exports = function(grunt) {
     grunt.log.writeln('TODO: define development workflow');
   });
 
-  grunt.registerTask('release', function() {
-    grunt.task.run('projectInfoMsg');
-
-    grunt.log.writeln('TODO: define build workflow');
-  });
+  grunt.registerTask('release', ['build', 'projectInfoMsg']);
 
   grunt.registerTask('preview', function() {
     grunt.task.run('projectInfoMsg');
