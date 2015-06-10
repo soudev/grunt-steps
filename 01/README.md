@@ -1,4 +1,4 @@
-# grunt-steps : 01 - basic
+# grunt-steps : 01 - basic ([pt-Br](README.pt-Br.md))
 
 > Basic usage of Grunt
 > - grunt plugins loaded at [Gruntfile.js lines 3-18](Gruntfile.js#L3-L18)
