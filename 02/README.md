@@ -105,6 +105,8 @@ bower install \
 
 * [Grunt.js](http://gruntjs.com/)
 
+  * [Grunt.js : Configuring Tasks - templates](http://gruntjs.com/configuring-tasks#templates)
+
   * [[GitHub] sindresorhus / time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks
 
   * [[GitHub] shootaroo / jit-grunt](https://github.com/shootaroo/jit-grunt) - JIT(Just In Time) plugin loader for Grunt.
