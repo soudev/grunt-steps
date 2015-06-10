@@ -2,12 +2,12 @@
 
 > **TODO:** review and update
 
-
+--
 
 > Intermediary usage of Grunt
-> - grunt plugins loaded at [Gruntfile.js lines 3-18](Gruntfile.js#L3-L18)
-> - grunt tasks settings defined at [Gruntfile.js lines 20-184](Gruntfile.js#L20-L184)
-> - grunt main and default tasks at [Gruntfile.js lines 228-243](Gruntfile.js#L228-L243)
+> - grunt plugins loaded with [jit-grunt](https://github.com/shootaroo/jit-grunt) at [Gruntfile.js line ?](Gruntfile.j)
+> - grunt tasks settings defined at [Gruntfile.js lines ???](Gruntfile.js)
+> - grunt main and default tasks at [Gruntfile.js lines ???](Gruntfile.js)
 
 
 ## Prerequisites
@@ -70,6 +70,8 @@ npm init
 
 npm install \
   jshint-stylish \
+  time-grunt \
+  jit-grunt \
   grunt \
   grunt-contrib-watch \
   grunt-contrib-clean \
@@ -102,6 +104,10 @@ bower install \
 --
 
 * [Grunt.js](http://gruntjs.com/)
+
+  * [[GitHub] sindresorhus / time-grunt](https://github.com/sindresorhus/time-grunt) - Display the elapsed execution time of grunt tasks
+
+  * [[GitHub] shootaroo / jit-grunt](https://github.com/shootaroo/jit-grunt) - JIT(Just In Time) plugin loader for Grunt.
 
   * [[GitHub] gruntjs / grunt](https://github.com/gruntjs/grunt) - Grunt: The JavaScript Task Runner
 
