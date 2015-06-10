@@ -19,12 +19,6 @@ module.exports = function(grunt) {
 
     config: require('./grunt/config'),
 
-    clean: {
-      build: ['<%= config.paths.build %>', '.tmp'],
-      dist: ['<%= config.paths.dist %>'],
-      bower: ['<%= config.paths.bower.toUse %>']
-    }, // @end: clean
-
     copy: {
       bower_jquery: {
         expand: true,
@@ -216,6 +210,9 @@ module.exports = function(grunt) {
     } // @end: watch
 
   });
+
+  // load tasks config per file
+  grunt.loadTasks('grunt/config_task');
 
   // @end: grunt tasks config
   //============================================================================
