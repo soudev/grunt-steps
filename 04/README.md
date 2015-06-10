@@ -1,4 +1,4 @@
-# grunt-steps : 04 - enhanced
+# grunt-steps : 04 - enhanced ([pt-Br](README.pt-Br.md))
 
 > Enhanced usage of Grunt
 > - grunt plugins loaded with [jit-grunt](https://github.com/shootaroo/jit-grunt) at [Gruntfile.js line 8](Gruntfile.js#L8)
@@ -7,9 +7,9 @@
 >   - project main settings centralized on [./tools/config.js](tools/config.js) and added to grunt settings at [Gruntfile.js line 23](Gruntfile.js#L23)
 > - grunt custom tasks defined on [./tools/grunt/custom_task](tools/grunt/custom_task) and loaded at [Gruntfile.js line 11](Gruntfile.js#L11)
 >   - grunt main tasks
->     - default task at [./tools/grunt/custom_task/default.js](tools/grunt/custom_task/default.js)
->     - release task at [./tools/grunt/custom_task/release.js](tools/grunt/custom_task/release.js)
->     - preview task at [./tools/grunt/custom_task/preview.js](tools/grunt/custom_task/preview.js)
+>     - default task on [./tools/grunt/custom_task/default.js](tools/grunt/custom_task/default.js)
+>     - release task on [./tools/grunt/custom_task/release.js](tools/grunt/custom_task/release.js)
+>     - preview task on [./tools/grunt/custom_task/preview.js](tools/grunt/custom_task/preview.js)
 
 
 ## Prerequisites
