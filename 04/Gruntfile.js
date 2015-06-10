@@ -33,7 +33,7 @@ module.exports = function(grunt) {
   //============================================================================
   // @begin: main
 
-  grunt.registerTask('preview', ['release', 'browserSync:dist']);
+  // grunt.registerTask('preview', ['release', 'browserSync:dist']);
 
   // @end: main
   //============================================================================

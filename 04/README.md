@@ -13,7 +13,7 @@
 >   - grunt main tasks
 >     - default task at [./tools/grunt/custom_task/default.js](tools/grunt/custom_task/default.js)
 >     - release task at [./tools/grunt/custom_task/release.js](tools/grunt/custom_task/release.js)
->     - preview task at ?
+>     - preview task at [./tools/grunt/custom_task/preview.js](tools/grunt/custom_task/preview.js)
 
 
 ## Prerequisites
