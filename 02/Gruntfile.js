@@ -80,6 +80,7 @@ module.exports = function(grunt) {
         dest: '<%= config.paths.dist %>/'
       },
 
+
       build_index: {
         src: '<%= config.paths.src %>/index.html',
         dest: '<%= config.paths.build %>/index.html'
@@ -90,6 +91,35 @@ module.exports = function(grunt) {
         cwd: '<%= config.paths.build %>/',
         src: '**',
         dest: '<%= config.paths.dist %>/'
+      },
+
+
+      src2build: {
+        expand: true,
+        cwd: '<%= config.paths.src %>/',
+        src: '**',
+        dest: '<%= config.paths.build %>/'
+      },
+
+      src_html2build: {
+        expand: true,
+        cwd: '<%= config.paths.src %>/',
+        src: '**/*.html',
+        dest: '<%= config.paths.build %>/'
+      },
+
+      src_js2build: {
+        expand: true,
+        cwd: '<%= config.paths.src %>/',
+        src: '**/*.js',
+        dest: '<%= config.paths.build %>/'
+      },
+
+      src_styles2build: {
+        expand: true,
+        cwd: '<%= config.paths.src %>/',
+        src: '**/*.css',
+        dest: '<%= config.paths.build %>/'
       }
     }, // @end: copy
 
@@ -175,13 +205,13 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src: [
-            '<%= config.paths.src %>/**/*.{html,css,js}'
+            '<%= config.paths.build %>/**/*.{html,css,js}'
           ]
         },
         options: {
           port: '<%= config.webserver.port %>',
           server: {
-            baseDir: ['<%= config.paths.src %>', '<%= config.paths.bower.toUse %>']
+            baseDir: ['<%= config.paths.build %>', '<%= config.paths.bower.toUse %>']
           },
           watchTask: true
         }
@@ -201,17 +231,27 @@ module.exports = function(grunt) {
     watch: {
       project_html: {
         files: '<%= config.project.html %>',
-        tasks: ['lintspaces:project_html']
+        tasks: [
+          'newer:lintspaces:project_html',
+          'newer:copy:src_html2build'
+        ]
       },
 
       project_styles: {
         files: '<%= config.project.styles %>',
-        tasks: ['lintspaces:project_styles']
+        tasks: [
+          'newer:lintspaces:project_styles',
+          'newer:copy:src_styles2build'
+        ]
       },
 
       project_js: {
         files: '<%= config.project.js %>',
-        tasks: ['jshint:project', 'lintspaces:project_js']
+        tasks: [
+          'newer:jshint:project',
+          'newer:lintspaces:project_js',
+          'newer:copy:src_js2build'
+        ]
       },
     } // @end: watch
 
@@ -230,7 +270,7 @@ module.exports = function(grunt) {
     grunt.log.writeln('description: ' + pkg.description);
   });
 
-  grunt.registerTask('validate', ['jshint', 'lintspaces']);
+  grunt.registerTask('validate', ['newer:jshint', 'newer:lintspaces']);
 
   //----------------------------------------------------------------------------
   // @begin: bower
@@ -256,7 +296,12 @@ module.exports = function(grunt) {
     'htmlmin:dist'
   ]);
 
-  grunt.registerTask('build', ['clean:dist', 'validate', 'build:index', 'bower:dist']);
+  grunt.registerTask('build', [
+    'clean:dist',
+    'validate',
+    'build:index',
+    'bower:dist'
+  ]);
 
   // @end: build
   //----------------------------------------------------------------------------
@@ -266,6 +311,7 @@ module.exports = function(grunt) {
     'clean',
     'validate',
     'bower:dev',
+    'copy:src2build',
     'browserSync:dev',
     'projectInfoMsg',
     'watch'

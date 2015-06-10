@@ -80,9 +80,10 @@ npm install \
   grunt-contrib-concat \
   grunt-contrib-uglify \
   grunt-contrib-htmlmin \
-  grunt-contrib-jshint \
   grunt-contrib-cssmin \
+  grunt-contrib-jshint \
   grunt-lintspaces \
+  grunt-newer \
   grunt-browser-sync \
   grunt-filerev \
   grunt-usemin \
@@ -126,11 +127,13 @@ bower install \
 
   * [[GitHub] gruntjs / grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin) - Minify HTML.
 
-  * [[GitHub] gruntjs / grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint) - Validate files with JSHint.
-
   * [[GitHub] gruntjs / grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin) - Compress CSS files.
 
+  * [[GitHub] gruntjs / grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint) - Validate files with JSHint.
+
   * [[GitHub] schorfES / grunt-lintspaces](https://github.com/schorfES/grunt-lintspaces) - A Grunt task for checking spaces in files.
+
+  * [[GitHub] tschaub / grunt-newer](https://github.com/tschaub/grunt-newer) - Configure Grunt tasks to run with newer files only.
 
   * [[GitHub] BrowserSync / grunt-browser-sync](https://github.com/BrowserSync/grunt-browser-sync) - Grunt Task for keeping multiple browsers & devices in sync when building websites.
 
