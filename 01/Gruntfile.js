@@ -147,7 +147,7 @@ module.exports = function(grunt) {
           server: {
             baseDir: ['src', '.local/bower']
           },
-          // watchTask: true
+          watchTask: true
         }
       },
 
@@ -162,7 +162,22 @@ module.exports = function(grunt) {
       }
     }, // @end: browserSync
 
-    // TODO: define watch tasks config
+    watch: {
+      project_html: {
+        files: ['src/**/*.html'],
+        tasks: ['lintspaces:project_html']
+      },
+
+      project_styles: {
+        files: ['src/**/*.css'],
+        tasks: ['lintspaces:project_styles']
+      },
+
+      project_js: {
+        files: ['src/**/*.js'],
+        tasks: ['jshint:project', 'lintspaces:project_js']
+      },
+    } // @end: watch
 
   });
 
@@ -218,7 +233,7 @@ module.exports = function(grunt) {
     'bower:dev',
     'browserSync:dev',
     'projectInfoMsg',
-    // 'watch'
+    'watch'
   ]);
 
   grunt.registerTask('release', ['build', 'projectInfoMsg']);
