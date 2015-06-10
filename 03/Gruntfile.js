@@ -20,29 +20,6 @@ module.exports = function(grunt) {
     config: require('./grunt/config'),
 
 
-    lintspaces: {
-      options: {
-        editorconfig: '<%= config.paths.editorconfig %>'
-      },
-
-      tools: {
-        src: '<%= config.tools %>'
-      },
-
-      project_js: {
-        src: '<%= config.project.js %>'
-      },
-
-      project_styles: {
-        src: '<%= config.project.styles %>'
-      },
-
-      project_html: {
-        src: '<%= config.project.html %>'
-      }
-
-    }, // @end: lintspaces
-
     filerev: {
       options: {
         encoding: 'utf8',
