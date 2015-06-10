@@ -199,7 +199,6 @@ module.exports = function(grunt) {
   //----------------------------------------------------------------------------
   // @begin: bower
 
-  // 'bower:dev'
   grunt.registerTask('bower:dev', ['clean:bower', 'copy:bower_jquery']);
 
   grunt.registerTask('bower:dist', ['bower:dev', 'copy:bower_dist']);
