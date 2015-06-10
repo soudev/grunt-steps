@@ -1,4 +1,4 @@
-# grunt-steps : 02 - intermediary
+# grunt-steps : 02 - intermediary ([pt-Br](README.pt-Br.md))
 
 > Intermediary usage of Grunt
 > - grunt plugins loaded with [jit-grunt](https://github.com/shootaroo/jit-grunt) at [Gruntfile.js line 8](Gruntfile.js#L8)
