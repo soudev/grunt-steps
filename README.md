@@ -1,4 +1,6 @@
-# grunt-steps
+# grunt-steps ([pt-Br](README.pt-Br.md))
+
+> basic steps to use [grunt.js](gruntjs.com)
 
 * [01](01) - basic
 
