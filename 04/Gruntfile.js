@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    config: require('./grunt/config')
+    config: require('./tools/config')
 
   });
 
