@@ -7,6 +7,7 @@
 > Intermediary usage of Grunt
 > - grunt plugins loaded with [jit-grunt](https://github.com/shootaroo/jit-grunt) at [Gruntfile.js line ?](Gruntfile.j)
 > - grunt tasks settings defined at [Gruntfile.js lines ???](Gruntfile.js)
+>   - project main settings centralized at [Gruntfile.js lines ???](Gruntfile.js) and added to grunt settings at [Gruntfile.js line ???](Gruntfile.js)
 > - grunt main and default tasks at [Gruntfile.js lines ???](Gruntfile.js)
 
 

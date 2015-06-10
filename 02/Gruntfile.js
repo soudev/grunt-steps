@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   //----------------------------------------------------------------------------
   // @begin: configs
 
-  var project = (function() {
+  var config = (function() {
 
     var config = {};
 
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       editorconfig : '../.editorconfig',
       src          : 'src',
       dist         : 'dist',
-      build        : '.local/build'
+      build        : '.local/build',
       bower        : {
         downloaded : 'bower_components',
         toUse      : '.local/bower'
@@ -57,39 +57,39 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    project: project,
+    config: config,
 
     clean: {
-      build: ['.local/build', '.tmp'],
-      dist: ['dist'],
-      bower: ['.local/bower']
+      build: ['<%= config.paths.build %>', '.tmp'],
+      dist: ['<%= config.paths.dist %>'],
+      bower: ['<%= config.paths.bower.toUse %>']
     }, // @end: clean
 
     copy: {
       bower_jquery: {
         expand: true,
-        cwd: 'bower_components/jquery/dist/',
+        cwd: '<%= config.paths.bower.downloaded %>/jquery/dist/',
         src: '**',
-        dest: '.local/bower/vendor/jquery/'
+        dest: '<%= config.paths.bower.toUse %>/vendor/jquery/'
       },
 
       bower_dist: {
         expand: true,
-        cwd: '.local/bower/',
+        cwd: '<%= config.paths.bower.toUse %>/',
         src: '**',
-        dest: 'dist/'
+        dest: '<%= config.paths.dist %>/'
       },
 
       build_index: {
-        src: 'src/index.html',
-        dest: '.local/build/index.html'
+        src: '<%= config.paths.src %>/index.html',
+        dest: '<%= config.paths.build %>/index.html'
       },
 
       builded2dist: {
         expand: true,
-        cwd: '.local/build/',
+        cwd: '<%= config.paths.build %>/',
         src: '**',
-        dest: 'dist/'
+        dest: '<%= config.paths.dist %>/'
       }
     }, // @end: copy
 
@@ -98,31 +98,31 @@ module.exports = function(grunt) {
         reporter: require('jshint-stylish')
       },
 
-      tools: ['Gruntfile.js'],
+      tools: '<%= config.tools %>',
 
 
-      project: ['src/**/*.js']
+      project: '<%= config.project.js %>'
     }, // @end: jshint
 
     lintspaces: {
       options: {
-        editorconfig: '../.editorconfig'
+        editorconfig: '<%= config.paths.editorconfig %>'
       },
 
       tools: {
-        src: ['Gruntfile.js']
+        src: '<%= config.tools %>'
       },
 
       project_js: {
-        src: ['src/**/*.js']
+        src: '<%= config.project.js %>'
       },
 
       project_styles: {
-        src: ['src/**/*.css']
+        src: '<%= config.project.styles %>'
       },
 
       project_html: {
-        src: ['src/**/*.html']
+        src: '<%= config.project.html %>'
       }
 
     }, // @end: lintspaces
@@ -135,26 +135,26 @@ module.exports = function(grunt) {
       },
       source: {
         src: [
-          '.local/build/scripts/*.js',
-          '.local/build/styles/*.css'
+          '<%= config.paths.build %>/scripts/*.js',
+          '<%= config.paths.build %>/styles/*.css'
         ]
       }
     }, // @end: filerev
 
     useminPrepare: {
-      html: 'src/index.html',
+      html: '<%= config.project.index %>',
       options: {
-        dest: '.local/build'
+        dest: '<%= config.paths.build %>'
       }
     }, // @end: useminPrepare
 
     usemin: {
-      html: '.local/build/index.html',
+      html: '<%= config.paths.build %>/index.html',
       options: {
         assetsDirs: [
-          '.local/build',
-          '.local/build/styles',
-          '.local/build/scripts'
+          '<%= config.paths.build %>',
+          '<%= config.paths.build %>/styles',
+          '<%= config.paths.build %>/scripts'
         ]
       }
     }, // @end: usemin
@@ -166,7 +166,7 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: {
-          'dist/index.html': 'dist/index.html'
+          '<%= config.paths.dist %>/index.html': '<%= config.paths.dist %>/index.html'
         }
       }
     }, // @end: htmlmin
@@ -175,13 +175,13 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src: [
-            'src/**/*.{html,css,js}'
+            '<%= config.paths.src %>/**/*.{html,css,js}'
           ]
         },
         options: {
-          port: 1337,
+          port: '<%= config.webserver.port %>',
           server: {
-            baseDir: ['src', '.local/bower']
+            baseDir: ['<%= config.paths.src %>', '<%= config.paths.bower.toUse %>']
           },
           watchTask: true
         }
@@ -190,9 +190,9 @@ module.exports = function(grunt) {
       dist: {
         options: {
           ui: false,
-          port: 1337,
+          port: '<%= config.webserver.port %>',
           server: {
-            baseDir: ['dist']
+            baseDir: ['<%= config.paths.dist %>']
           }
         }
       }
@@ -200,17 +200,17 @@ module.exports = function(grunt) {
 
     watch: {
       project_html: {
-        files: ['src/**/*.html'],
+        files: '<%= config.project.html %>',
         tasks: ['lintspaces:project_html']
       },
 
       project_styles: {
-        files: ['src/**/*.css'],
+        files: '<%= config.project.styles %>',
         tasks: ['lintspaces:project_styles']
       },
 
       project_js: {
-        files: ['src/**/*.js'],
+        files: '<%= config.project.js %>',
         tasks: ['jshint:project', 'lintspaces:project_js']
       },
     } // @end: watch
