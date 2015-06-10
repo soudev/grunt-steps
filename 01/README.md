@@ -1,12 +1,9 @@
 # grunt-steps : 01 - basic
 
-> **TODO:** review and update
-
-
 > Basic usage of Grunt
-> - grunt plugins loaded at Gruntfile.js lines ?? 
-> - grunt tasks settings defined at Gruntfile.js lines ?? 
-> - grunt main and default tasks at Gruntfile.js lines ?? 
+> - grunt plugins loaded at [Gruntfile.js lines 3-18](Gruntfile.js#L3-L18)
+> - grunt tasks settings defined at [Gruntfile.js lines 20-184](Gruntfile.js#L20-L184)
+> - grunt main and default tasks at [Gruntfile.js lines 228-243](Gruntfile.js#L228-L243)
 
 
 ## Prerequisites
@@ -87,8 +84,6 @@ npm install \
 touch Gruntfile.js
 
 bower init
-
-touch .bowerrc
 
 bower install \
   jquery \
