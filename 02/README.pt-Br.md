@@ -5,7 +5,7 @@
 > - as configurações das tarefas do grunt estão definidas nas [linhas 54-260 do Gruntfile.js](Gruntfile.js#L54-L260)
 >   - as principais configurações do projeto estão centralizadas nas [linhas 14-52 do Gruntfile.js](Gruntfile.js#L14-L52) e adicionada as configurações do grunt na [linha 60 do Gruntfile.js](Gruntfile.js#L60)
 > - as tarefas customizadas do grunt estão definidas nas [linhas 262-326 do Gruntfile.js](Gruntfile.js#L262-L326)
-> - as principais tarefas e tarefa default(padrão) do grunt estão definidas nas [linhas 308-324 do Gruntfile.js](Gruntfile.js#L308-L324)
+> - as principais tarefas e a tarefa default(padrão) do grunt estão definidas nas [linhas 308-324 do Gruntfile.js](Gruntfile.js#L308-L324)
 
 
 ## Pré-requisitos
