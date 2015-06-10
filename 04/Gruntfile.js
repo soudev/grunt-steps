@@ -31,14 +31,6 @@ module.exports = function(grunt) {
   // @begin: grunt tasks =======================================================
   //============================================================================
 
-  grunt.registerTask('projectInfoMsg', function() {
-    var pkg = grunt.config.get('pkg');
-
-    grunt.log.writeln('');
-    grunt.log.writeln('project: ' + pkg.name + ' v' + pkg.version);
-    grunt.log.writeln('description: ' + pkg.description);
-  });
-
   grunt.registerTask('validate', ['newer:jshint', 'newer:lintspaces']);
 
   //----------------------------------------------------------------------------
