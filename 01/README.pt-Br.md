@@ -1,9 +1,9 @@
 # grunt-steps : 01 - básico ([en](README.md))
 
 > Uso básico do Grunt
-> - plugins do grunt carregados nas [linhas 3-18 do Gruntfile.js](Gruntfile.js#L3-L18)
-> - configurações das tarefas do grunt definidas nas [linhas 20-184 do Gruntfile.js](Gruntfile.js#L20-L184)
-> - principais tarefas e default(padrão) do grunt nas [linhas 228-243 do Gruntfile.js](Gruntfile.js#L228-L243)
+> - os plugins do grunt são carregados nas [linhas 3-18 do Gruntfile.js](Gruntfile.js#L3-L18)
+> - as configurações das tarefas do grunt estão definidas nas [linhas 20-184 do Gruntfile.js](Gruntfile.js#L20-L184)
+> - as principais tarefas e default(padrão) do grunt estão definidas nas [linhas 228-243 do Gruntfile.js](Gruntfile.js#L228-L243)
 
 
 ## Pré-requisitos
