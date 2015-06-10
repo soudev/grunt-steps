@@ -3,15 +3,15 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   //----------------------------------------------------------------------------
-  // @begin: grunt plugins
+  // @begin: load grunt plugins and custom tasks
 
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin'
   })({
     customTasksDir: 'tools/grunt/custom_task'
-  }); // test: grunt helloworld
+  });
 
-  // @begin: grunt plugins
+  // @begin: load grunt plugins and custom tasks
   //----------------------------------------------------------------------------
   // @begin: grunt tasks config
 
