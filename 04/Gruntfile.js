@@ -7,7 +7,9 @@ module.exports = function(grunt) {
 
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin'
-  });
+  })({
+    customTasksDir: 'tools/grunt/custom_task'
+  }); // test: grunt helloworld
 
   // @begin: grunt plugins
   //----------------------------------------------------------------------------
