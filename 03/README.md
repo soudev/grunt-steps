@@ -6,10 +6,10 @@
 
 > Advanced usage of Grunt
 > - grunt plugins loaded with [jit-grunt](https://github.com/shootaroo/jit-grunt) at [Gruntfile.js line 8](Gruntfile.js#L8)
-> - grunt tasks settings defined at [Gruntfile.js lines 54-260](Gruntfile.js#L54-L260)
->   - project main settings centralized at [Gruntfile.js lines 14-52](Gruntfile.js#L14-L52) and added to grunt settings at [Gruntfile.js line 60](Gruntfile.js#L60)
-> - grunt custom tasks defined at [Gruntfile.js lines 262-326](Gruntfile.js#L262-L326)
-> - grunt main and default tasks at [Gruntfile.js lines 308-324](Gruntfile.js#L308-L324)
+> - grunt tasks settings defined at [Gruntfile.js lines ???](Gruntfile.js)
+>   - project main settings centralized on [./grunt/config.js](grunt/config.js) and added to grunt settings at [Gruntfile.js line ?](Gruntfile.js)
+> - grunt custom tasks defined at [Gruntfile.js lines ???](Gruntfile.js)
+> - grunt main and default tasks at [Gruntfile.js lines ???](Gruntfile.js)
 
 
 ## Prerequisites
