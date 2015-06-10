@@ -33,8 +33,6 @@ module.exports = function(grunt) {
   //============================================================================
   // @begin: main
 
-  grunt.registerTask('release', ['build', 'projectInfoMsg']);
-
   grunt.registerTask('preview', ['release', 'browserSync:dist']);
 
   // @end: main

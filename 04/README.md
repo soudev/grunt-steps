@@ -12,7 +12,7 @@
 > - grunt custom tasks defined on [./tools/grunt/custom_task](tools/grunt/custom_task) and loaded at [Gruntfile.js line ?](Gruntfile.js)
 >   - grunt main tasks
 >     - default task at [./tools/grunt/custom_task/default.js](tools/grunt/custom_task/default.js)
->     - release task at ?
+>     - release task at [./tools/grunt/custom_task/release.js](tools/grunt/custom_task/release.js)
 >     - preview task at ?
 
 
