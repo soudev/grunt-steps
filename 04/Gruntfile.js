@@ -22,7 +22,7 @@ module.exports = function(grunt) {
   });
 
   // load tasks config per file
-  grunt.loadTasks('grunt/config_task');
+  grunt.loadTasks('tools/grunt/config_task');
 
   // @end: grunt tasks config
   //============================================================================
