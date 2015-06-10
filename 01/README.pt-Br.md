@@ -3,7 +3,7 @@
 > Uso básico do Grunt
 > - os plugins do grunt são carregados nas [linhas 3-18 do Gruntfile.js](Gruntfile.js#L3-L18)
 > - as configurações das tarefas do grunt estão definidas nas [linhas 20-184 do Gruntfile.js](Gruntfile.js#L20-L184)
-> - as principais tarefas e default(padrão) do grunt estão definidas nas [linhas 227-242 do Gruntfile.js](Gruntfile.js#L227-L242)
+> - as principais tarefas e a default(padrão) do grunt estão definidas nas [linhas 227-242 do Gruntfile.js](Gruntfile.js#L227-L242)
 
 
 ## Pré-requisitos
