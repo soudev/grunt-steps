@@ -20,17 +20,6 @@ module.exports = function(grunt) {
     config: require('./grunt/config'),
 
 
-    jshint: {
-      options: {
-        reporter: require('jshint-stylish')
-      },
-
-      tools: '<%= config.tools %>',
-
-
-      project: '<%= config.project.js %>'
-    }, // @end: jshint
-
     lintspaces: {
       options: {
         editorconfig: '<%= config.paths.editorconfig %>'
