@@ -20,24 +20,6 @@ module.exports = function(grunt) {
     config: require('./grunt/config'),
 
 
-    useminPrepare: {
-      html: '<%= config.project.index %>',
-      options: {
-        dest: '<%= config.paths.build %>'
-      }
-    }, // @end: useminPrepare
-
-    usemin: {
-      html: '<%= config.paths.build %>/index.html',
-      options: {
-        assetsDirs: [
-          '<%= config.paths.build %>',
-          '<%= config.paths.build %>/styles',
-          '<%= config.paths.build %>/scripts'
-        ]
-      }
-    }, // @end: usemin
-
     htmlmin: {
       dist: {
         options: {
