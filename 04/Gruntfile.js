@@ -9,6 +9,7 @@ module.exports = function(grunt) {
     useminPrepare: 'grunt-usemin'
   })({
     customTasksDir: 'tools/grunt/custom_task'
+    // default grunt task defined on tools/grunt/custom_task/default.js
   });
 
   // @begin: load grunt plugins and custom tasks
@@ -31,16 +32,6 @@ module.exports = function(grunt) {
   // @begin: grunt tasks =======================================================
   //============================================================================
   // @begin: main
-
-  grunt.registerTask('default', [
-    'clean',
-    'validate',
-    'bower:dev',
-    'copy:src2build',
-    'browserSync:dev',
-    'projectInfoMsg',
-    'watch'
-  ]);
 
   grunt.registerTask('release', ['build', 'projectInfoMsg']);
 

@@ -10,7 +10,10 @@
 >   - split grunt config into per-task files on [./tools/grunt/config_task directory](tools/grunt/config_task) and loaded at [Gruntfile.js line 25](Gruntfile.js#L25)
 >   - project main settings centralized on [./tools/config.js](tools/config.js) and added to grunt settings at [Gruntfile.js line 20](Gruntfile.js#L20)
 > - grunt custom tasks defined on [./tools/grunt/custom_task](tools/grunt/custom_task) and loaded at [Gruntfile.js line ?](Gruntfile.js)
->   - grunt main and default tasks at ?
+>   - grunt main tasks
+>     - default task at [./tools/grunt/custom_task/default.js](tools/grunt/custom_task/default.js)
+>     - release task at ?
+>     - preview task at ?
 
 
 ## Prerequisites
