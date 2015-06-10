@@ -9,7 +9,7 @@
 >   - grunt main tasks
 >     - `default` task on [./tools/grunt/custom_task/default.js](tools/grunt/custom_task/default.js)
 >     - `release` task on [./tools/grunt/custom_task/release.js](tools/grunt/custom_task/release.js)
->     - preview` task on [./tools/grunt/custom_task/preview.js](tools/grunt/custom_task/preview.js)
+>     - `preview` task on [./tools/grunt/custom_task/preview.js](tools/grunt/custom_task/preview.js)
 
 
 ## Prerequisites
