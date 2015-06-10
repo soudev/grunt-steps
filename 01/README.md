@@ -3,7 +3,7 @@
 > Basic usage of Grunt
 > - grunt plugins loaded at [Gruntfile.js lines 3-18](Gruntfile.js#L3-L18)
 > - grunt tasks settings defined at [Gruntfile.js lines 20-184](Gruntfile.js#L20-L184)
-> - grunt main and default tasks at [Gruntfile.js lines 228-243](Gruntfile.js#L228-L243)
+> - grunt main and default tasks at [Gruntfile.js lines 227-243](Gruntfile.js#L227-L242)
 
 
 ## Prerequisites
