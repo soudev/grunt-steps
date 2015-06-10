@@ -130,6 +130,6 @@ bower install \
       * [[GitHub] kanakiyajay / grunt-tasks](https://github.com/kanakiyajay/grunt-tasks) - This repo is for all the Gruntfile.js for grunt plugins
 
 
-## License
+## Licença
 
 - [MIT](../LICENSE)
