@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     // default grunt task defined on tools/grunt/custom_task/default.js
   });
 
-  // @begin: load grunt plugins and custom tasks
+  // @end: load grunt plugins and custom tasks
   //----------------------------------------------------------------------------
   // @begin: grunt tasks config
 

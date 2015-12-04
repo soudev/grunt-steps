@@ -15,7 +15,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-filerev');
   grunt.loadNpmTasks('grunt-usemin');
 
-  // @begin: grunt plugins
+  // @end: grunt plugins
   //----------------------------------------------------------------------------
   // @begin: grunt tasks config
 

@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     useminPrepare: 'grunt-usemin'
   });
 
-  // @begin: grunt plugins
+  // @end: grunt plugins
   //----------------------------------------------------------------------------
   // @begin: configs
 
